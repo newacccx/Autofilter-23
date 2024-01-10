@@ -17,17 +17,17 @@ def is_valid_ip(ip):
     return re.match(ip_pattern, ip) is not None
 
 # Bot information
-API_ID = environ.get('API_ID', '')
+API_ID = environ.get('API_ID', '6381607')
 if len(API_ID) == 0:
     print('Error - API_ID is missing, exiting now')
     exit()
 else:
     API_ID = int(API_ID)
-API_HASH = environ.get('API_HASH', '')
+API_HASH = environ.get('API_HASH', '9799ad1623afe9bad664501f984b71fe')
 if len(API_HASH) == 0:
     print('Error - API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '')
+BOT_TOKEN = environ.get('BOT_TOKEN', '5186977432:AAGuhZBPtXe4rJA_qofPWlEQJa0DAWQAz10')
 if len(BOT_TOKEN) == 0:
     print('Error - BOT_TOKEN is missing, exiting now')
     exit()
@@ -37,7 +37,7 @@ PORT = int(environ.get('PORT', '80'))
 PICS = (environ.get('PICS', 'https://telegra.ph/file/58fef5cb458d5b29b0186.jpg https://telegra.ph/file/f0aa4f433132769f8970c.jpg https://telegra.ph/file/f515fbc2084592eca60a5.jpg https://telegra.ph/file/20dbdcffaa89bd3d09a74.jpg https://telegra.ph/file/6045ba953af4def846238.jpg')).split()
 
 # Bot Admins
-ADMINS = environ.get('ADMINS', '')
+ADMINS = environ.get('ADMINS', '1258695344')
 if len(ADMINS) == 0:
     print('Error - ADMINS is missing, exiting now')
     exit()
@@ -45,13 +45,13 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1001481389568 -1001540677762 -1002049285913').split()]
 if len(INDEX_CHANNELS) == 0:
     print('Info - INDEX_CHANNELS is empty')
-AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '').split()]
+AUTH_CHANNEL = [int(auth_channels) for auth_channels in environ.get('AUTH_CHANNEL', '-1001540677762').split()]
 if len(AUTH_CHANNEL) == 0:
     print('Info - AUTH_CHANNEL is empty')
-LOG_CHANNEL = environ.get('LOG_CHANNEL', '')
+LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1001775402942')
 if len(LOG_CHANNEL) == 0:
     print('Error - LOG_CHANNEL is missing, exiting now')
     exit()
@@ -59,7 +59,7 @@ else:
     LOG_CHANNEL = int(LOG_CHANNEL)
 
 # support group
-SUPPORT_GROUP = environ.get('SUPPORT_GROUP', '')
+SUPPORT_GROUP = environ.get('SUPPORT_GROUP', 'HDCINEMA_1')
 if len(SUPPORT_GROUP) == 0:
     print('Error - SUPPORT_GROUP is missing, exiting now')
     exit()
@@ -72,12 +72,12 @@ if len(OPENAI_API) == 0:
     print('Info - OPENAI_API is empty')
 
 # MongoDB information
-DATABASE_URL = environ.get('DATABASE_URL', "")
+DATABASE_URL = environ.get('DATABASE_URL', "mongodb+srv://newuser:newuser@cluster0.80t5h.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 if len(DATABASE_URL) == 0:
     print('Error - DATABASE_URL is missing, exiting now')
     exit()
-DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
+DATABASE_NAME = environ.get('DATABASE_NAME', "telegram")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_Files')
 
 # Links
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/SL_Bots_Support')
@@ -93,8 +93,8 @@ MAX_BTN = int(environ.get('MAX_BTN', 10))
 LANGUAGES = [language.lower() for language in environ.get('LANGUAGES', 'english hindi telugu tamil kannada malayalam').split()]
 IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", script.IMDB_TEMPLATE)
 FILE_CAPTION = environ.get("FILE_CAPTION", script.FILE_CAPTION)
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "mdiskshortner.link")
-SHORTLINK_API = environ.get("SHORTLINK_API", "36f1ae74ba1aa01e5bd73bdd0bc22aa915443501")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "")
+SHORTLINK_API = environ.get("SHORTLINK_API", "")
 VERIFY_EXPIRE = int(environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 WELCOME_TEXT = environ.get("WELCOME_TEXT", script.WELCOME_TEXT)
 INDEX_EXTENSIONS = [extensions.lower() for extensions in environ.get('INDEX_EXTENSIONS', 'mp4 mkv').split()]
