@@ -67,7 +67,7 @@ else:
     SUPPORT_GROUP = int(SUPPORT_GROUP)
 
 # for chatGPT
-OPENAI_API = environ.get('OPENAI_API', '')
+OPENAI_API = environ.get('OPENAI_API', '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')
 if len(OPENAI_API) == 0:
     print('Info - OPENAI_API is empty')
 
@@ -112,13 +112,13 @@ SPELL_CHECK = is_enabled("SPELL_CHECK", True)
 SHORTLINK = is_enabled('SHORTLINK', False)
 
 # for stream
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001960720614")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1001775402942")
 if len(BIN_CHANNEL) == 0:
     print('Error - BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://t.me/logchannelcc")
 if len(URL) == 0:
     print('Error - URL is missing, exiting now')
     exit()
